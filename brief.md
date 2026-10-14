@@ -34,12 +34,23 @@ Resource: Hoffman, P., & McManus, P. (2018). *DNS Queries over HTTPS (DoH).* RFC
 
 ## Cybersecurity
 
-Phishing-resistant authentication uses cryptographic methods to bind authentication to the legitimate verifier's identity, making it harder for attackers to reuse authentication information on fake websites. WebAuthn, used by FIDO2 authenticators, provides phishing resistance by binding authentication to the verifier's authenticated domain name. Passkeys and FIDO2 security keys can provide phishing-resistant authentication, while passwords combined with SMS codes or manually entered one-time passwords are not phishing-resistant.
+Phishing resistance is the ability of an authentication protocol to prevent the disclosure of authentication secrets and valid authenticator outputs to an impostor verifier. NIST explains that authentication methods requiring users to manually enter an authenticator output, such as one-time passwords (OTP), are not considered phishing-resistant. An attacker may relay the entered code to the legitimate verifier and successfully authenticate.
 
-Resource: National Institute of Standards and Technology (NIST). *Authenticator and Verifier Requirements*, Section 3.2.5, Phishing Resistance. https://pages.nist.gov/800-63-4/sp800-63b/authenticators/
+Resource: National Institute of Standards and Technology (NIST). *Authenticator and Verifier Requirements*, Section 3.2.5, "Phishing Resistance." https://pages.nist.gov/800-63-4/sp800-63b/authenticators/
 
 ## Data
 
 Under Oman's Personal Data Protection Law, organizations must obtain the required consent before processing personal data and inform individuals about the purpose of processing and their rights. They must protect the confidentiality of personal data, establish appropriate procedures for handling it, and maintain records of processing activities. When a personal data breach occurs, the controller must notify the Ministry and the affected individual as required by the law and its Executive Regulations.
 
 Resource: Sultanate of Oman. (2022). *Royal Decree 6/2022 Promulgating the Personal Data Protection Law.* https://prod.mtcit.gov.om/ITAPortal/MediaCenter/Document_detail.aspx?NID=10154
+
+
+## Misconception in My Track
+
+A common misconception in cybersecurity is that all multi-factor authentication (MFA) methods are phishing-resistant. However, the NIST guidelines explain that authentication methods requiring users to manually enter an authenticator output, such as one-time passwords (OTP), are not considered phishing-resistant. This is because an attacker may relay the entered code to the legitimate verifier and successfully authenticate. Therefore, using multiple authentication factors does not automatically make an authentication method phishing-resistant.
+
+Evidence: NIST SP 800-63B, Section 3.2.5, "Phishing Resistance."
+
+## Open Question
+
+How can government organizations choose authentication methods that provide phishing resistance while remaining easy for citizens to use?
